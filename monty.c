@@ -37,7 +37,10 @@ int main(int argc, char *argv[])
 		{
 			number = atoi(num);
 		}
-		get_fun(token, &stack, line_number);
+		if (get_fun(token, &stack, line_number) == 1)
+		{
+			printf("L%x: unknown instruction %s\n", line_number, token);
+		}
 	}
 	fclose(filetoread);
 	free_stack(stack);

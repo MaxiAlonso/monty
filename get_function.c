@@ -9,11 +9,12 @@
  * Return: pointer to the function that corresponds
  **/
 
-void get_fun(char *token, stack_t **stack, unsigned int line_number)
+int get_fun(char *token, stack_t **stack, unsigned int line_number)
 {
 	instruction_t fun[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
@@ -28,9 +29,5 @@ void get_fun(char *token, stack_t **stack, unsigned int line_number)
 		}
 		i++;
 	}
-	if (succes == 1)
-	{
-		printf("L%x: unknown instruction %s\n", line_number, token);
-		exit(EXIT_FAILURE);
-	}
+	return (succes);
 }
