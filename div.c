@@ -14,7 +14,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	{
 		if (node->n == 0)
 		{
-			printf("L%d: division by zero\n", line_number);
+			fprintf(stderr, "L%d: division by zero\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 		next_node = (*stack)->next;
@@ -24,7 +24,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		printf("L%d: can't div, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
