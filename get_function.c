@@ -4,7 +4,7 @@
  * get_fun- selects the correct function
  * to perform the innstruction asked by the user.
  * @token: instruction passed as argument to the program
- * @stack: doubly linked list 
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction.
  * Return: pointer to the function that corresponds
  **/
