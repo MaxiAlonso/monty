@@ -6,3 +6,5 @@ add
 pall
 pop
 add
+pop
+add
