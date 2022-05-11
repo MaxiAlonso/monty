@@ -23,16 +23,16 @@ int main(int argc, char *argv[])
 	filetoread = fopen(argv[1], "r");
 	if (filetoread == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file%s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&str_line, &size, filetoread) != -1)
 	{
-		token = strtok(str_line, "\t\n ");
+		token = strtok(str_line, " \t\n");
 		line_number++;
 		if (get_fun(token, &stack, line_number) == 1)
 		{
-			fprintf(stderr, "L%d: unknown instruction%s\n", line_number, token);
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
 			fclose(filetoread), free_stack(stack), free(str_line);
 			exit(EXIT_FAILURE);
 		}
