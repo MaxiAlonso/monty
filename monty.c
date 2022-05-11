@@ -7,13 +7,11 @@
  * Return: always 0
  **/
 
-/*int number = 0;*/
-
 int main(int argc, char *argv[])
 {
 	unsigned int line_number = 0;
 	size_t size = 0;
-	char *str_line = NULL, *token = NULL/*, *num = NULL*/; 
+	char *str_line = NULL, *token = NULL/*, *num = NULL*/;
 	FILE *filetoread;
 	stack_t *stack = NULL;
 
@@ -30,7 +28,7 @@ int main(int argc, char *argv[])
 	}
 	while (getline(&str_line, &size, filetoread) != -1)
 	{
-		token = strtok(str_line, "\n\t ");
+		token = strtok(str_line, " \t\n");
 		line_number++;
 		/*num = strtok(NULL, "\n\t ");
 		if (num == NULL || _isdigit(num, line_number) == -1)
