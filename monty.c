@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
 	while (getline(&str_line, &size, filetoread) != -1)
 	{
 		token = strtok(str_line, " \t\n");
+		if (token == NULL || token[0] == '#')
+			continue;
 		line_number++;
 		if (get_fun(token, &stack, line_number) == 1)
 		{
