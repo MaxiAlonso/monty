@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		token = strtok(str_line, "\n\t ");
 		line_number++;
 		num = strtok(NULL, "\n\t ");
-		if (num != NULL && _isdigit(num, line_number) == 1)
+		if (_isdigit(num, line_number) == 1)
 		{
 			number = atoi(num);
 		}
