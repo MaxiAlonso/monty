@@ -9,19 +9,21 @@
 
 void pstr(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
+	stack_t *node = *stack;
+
 	if (*stack != NULL)
 	{
-		while (*stack != NULL)
+		while (node != NULL)
 		{
-			if ((*stack)->n >= 1 && (*stack)->n <= 127)
+			if (node->n >= 1 && node->n <= 127)
 			{
-				printf("%c", (*stack)->n);
+				printf("%c", node->n);
 			}
 			else
 			{
 				break;
 			}
-			*stack = (*stack)->next;
+			node = node->next;
 		}
 	}
 	printf("\n");
