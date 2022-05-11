@@ -43,6 +43,7 @@ void push(stack_t **stack, unsigned int line_number __attribute__((unused)));
 void pall(stack_t **stack, unsigned int line_number __attribute__((unused)));
 void pint(stack_t **stack, unsigned int line_number __attribute__((unused)));
 void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 int get_fun(char *token, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
 int _isdigit(char *str, unsigned int line_number);
