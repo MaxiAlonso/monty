@@ -10,11 +10,26 @@
 void push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *new_node;
+	char *num;
+	int number = 0;
 
+	num = strtok(NULL, "\n\t ");
+	if (num == NULL || _isdigit(num, line_number) == -1)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free_stack(*stack);
+		exit(EXIT_FAILURE);
+	}
+	else
+		number = atoi(num);
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		if (*stack != NULL)
+		{
+			free_stack(*stack);
+		}
 		exit(EXIT_FAILURE);
 	}
 	new_node->n = number;

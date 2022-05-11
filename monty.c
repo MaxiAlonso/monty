@@ -7,13 +7,13 @@
  * Return: always 0
  **/
 
-int number = 0;
+/*int number = 0;*/
 
 int main(int argc, char *argv[])
 {
 	unsigned int line_number = 0;
 	size_t size = 0;
-	char *str_line = NULL, *token = NULL, *num = NULL;
+	char *str_line = NULL, *token = NULL/*, *num = NULL*/; 
 	FILE *filetoread;
 	stack_t *stack = NULL;
 
@@ -32,19 +32,22 @@ int main(int argc, char *argv[])
 	{
 		token = strtok(str_line, "\n\t ");
 		line_number++;
-		num = strtok(NULL, "\n\t ");
-		if (_isdigit(num, line_number) == 1)
+		/*num = strtok(NULL, "\n\t ");
+		if (num == NULL || _isdigit(num, line_number) == -1)
 		{
-			number = atoi(num);
+			fprintf(stderr, "L%d: usage: push integer %s\n", line_number, token);
+			fclose(filetoread), free_stack(stack), free(str_line);
+			exit(EXIT_FAILURE);
 		}
+		else
+			number = atoi(num);*/
 		if (get_fun(token, &stack, line_number) == 1)
 		{
-			fprintf(stderr, "L%x: unknown instruction%s\n", line_number, token);
+			fprintf(stderr, "L%d: unknown instruction%s\n", line_number, token);
+			fclose(filetoread), free_stack(stack), free(str_line);
 			exit(EXIT_FAILURE);
 		}
 	}
-	fclose(filetoread);
-	free_stack(stack);
-	free(str_line);
+	fclose(filetoread), free_stack(stack), free(str_line);
 	return (0);
 }
