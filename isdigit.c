@@ -11,11 +11,6 @@ int _isdigit(char *str, unsigned int line_number)
 {
 	unsigned int i = 0;
 
-	if (str == NULL)
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
 	while (str[i] != '\0')
 	{
 		if (str[i] == '-')
