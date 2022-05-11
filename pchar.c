@@ -10,7 +10,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 {
 	if (*stack != NULL)
 	{
-		if ((*stack)->n >= 0 && (*stack)->n <= 255)
+		if ((*stack)->n >= 0 && (*stack)->n <= 127)
 		{
 			printf("%c\n", (*stack)->n);
 		}
