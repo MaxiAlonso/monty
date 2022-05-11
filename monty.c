@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
 		if (get_fun(token, &stack, line_number) == 1)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
-			fclose(filetoread), free_stack(stack), free(str_line);
+			free_stack(stack), free(str_line), fclose(filetoread);
 			exit(EXIT_FAILURE);
 		}
 	}
-	fclose(filetoread), free_stack(stack), free(str_line);
+	free_stack(stack), free(str_line), fclose(filetoread);
 	return (0);
 }
