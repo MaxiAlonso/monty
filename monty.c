@@ -28,17 +28,8 @@ int main(int argc, char *argv[])
 	}
 	while (getline(&str_line, &size, filetoread) != -1)
 	{
-		token = strtok(str_line, " \t\n");
+		token = strtok(str_line, "\t\n ");
 		line_number++;
-		/*num = strtok(NULL, "\n\t ");
-		if (num == NULL || _isdigit(num, line_number) == -1)
-		{
-			fprintf(stderr, "L%d: usage: push integer %s\n", line_number, token);
-			fclose(filetoread), free_stack(stack), free(str_line);
-			exit(EXIT_FAILURE);
-		}
-		else
-			number = atoi(num);*/
 		if (get_fun(token, &stack, line_number) == 1)
 		{
 			fprintf(stderr, "L%d: unknown instruction%s\n", line_number, token);

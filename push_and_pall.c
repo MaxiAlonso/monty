@@ -13,7 +13,7 @@ void push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	char *num;
 	int number = 0;
 
-	num = strtok(NULL, " \t\n");
+	num = strtok(NULL, "\t\n ");
 	if (num == NULL || _isdigit(num, line_number) == -1)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
