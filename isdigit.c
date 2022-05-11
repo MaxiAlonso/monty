@@ -23,7 +23,7 @@ int _isdigit(char *str, unsigned int line_number)
 		}
 		else
 		{
-			printf("L%x: usage: push integer\n", line_number);
+			fprintf(stderr, "L%x: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 			return (0);
 		}
