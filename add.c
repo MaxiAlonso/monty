@@ -10,7 +10,7 @@ void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node = *stack, *next_node;
 
-	if (stack != NULL && (*stack)->next != NULL)
+	if (*stack != NULL && (*stack)->next != NULL)
 	{
 		next_node = (*stack)->next;
 		next_node->n += node->n;
