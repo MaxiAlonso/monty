@@ -4,8 +4,8 @@
  * get_fun- selects the correct function
  * to perform the innstruction asked by the user.
  * @token: instruction passed as argument to the program
- * @stack: s
- * @line_number: s
+ * @stack: doubly linked list 
+ * @line_number: number of line wich contain the instruction.
  * Return: pointer to the function that corresponds
  **/
 
@@ -21,6 +21,8 @@ int get_fun(char *token, stack_t **stack, unsigned int line_number)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
