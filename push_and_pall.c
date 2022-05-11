@@ -42,12 +42,9 @@ void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *node = *stack;
 
-	if (*stack != NULL)
+	while (node != NULL)
 	{
-		while (node != NULL)
-		{
-			printf("%d\n", node->n);
-			node = node->next;
-		}
+		printf("%d\n", node->n);
+		node = node->next;
 	}
 }
