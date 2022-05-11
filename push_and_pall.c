@@ -14,14 +14,13 @@ void push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	int number = 0;
 
 	num = strtok(NULL, " \t\n");
-	if (num == NULL || _isdigit(num, line_number) == -1)
+	if (num == NULL || _isdigit(num) == -1)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	else
-		number = atoi(num);
+	number = atoi(num);
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{

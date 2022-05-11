@@ -49,6 +49,6 @@ void _div(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 int get_fun(char *token, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
-int _isdigit(char *str, unsigned int line_number);
+int _isdigit(char *num);
 
 #endif
