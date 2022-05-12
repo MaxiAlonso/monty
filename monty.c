@@ -1,5 +1,7 @@
 #include "monty.h"
 
+int stack_queue = 0;
+
 /**
  * main - entry point for monty interpreter
  * @argc: number of argunments

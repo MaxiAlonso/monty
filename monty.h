@@ -6,6 +6,8 @@
 #include <string.h>
 #include <ctype.h>
 
+extern int stack_queue;
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -52,6 +54,10 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
+void push_stack(stack_t **stack, int number);
+void push_queue(stack_t **stack, int number);
+void _stack(stack_t **stack, unsigned int line_number);
+void queue(stack_t **stack, unsigned int line_number);
 int get_fun(char *token, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
 int _isdigit(char *num);
