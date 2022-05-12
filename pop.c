@@ -2,7 +2,7 @@
 
 /**
  * pop - removes the top element of the stack.
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction..
  **/
 

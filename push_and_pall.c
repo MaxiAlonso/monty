@@ -2,8 +2,7 @@
 
 /**
  * push - push an element to the stack.
- *
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction.
  **/
 

@@ -2,7 +2,7 @@
 
 /**
  * sub - subtracts the top element of the stack from the second top element.
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction..
  **/
 

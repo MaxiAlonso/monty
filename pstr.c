@@ -3,7 +3,7 @@
 /**
  * pstr - prints the string starting at the top of the stack,
  * followed by a new line.
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction.
  **/
 

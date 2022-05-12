@@ -3,7 +3,7 @@
 /**
  * mod - omputes the rest of the division of the second top element
  * of the stack by the top
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction..
  **/
 

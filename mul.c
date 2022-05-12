@@ -2,7 +2,7 @@
 
 /**
  * mul - multiplies the second top element of the stack with the top.
- * @stack: doubly linked list node structure
+ * @stack: doubly linked list
  * @line_number: number of line wich contain the instruction..
  **/
 
